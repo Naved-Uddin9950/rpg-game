@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello, World!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="h-full w-full min-h-screen bg-green-500 relative flex justify-center items-center overflow-hidden">
+        <div id="player" class="w-12 h-12 bg-gray-800 rounded-full absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
+
+        <!-- Game controls -->
+        <div class="absolute bottom-5 left-5 flex flex-col items-center" id="controls">
+            <!-- Control arrows -->
+            <div class="flex items-center mb-2">
+                <button class="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex justify-center items-center" onclick="up()">
+                    ⬆️
+                </button>
+            </div>
+            <div class="flex">
+                <button class="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full mr-2 flex justify-center items-center" onclick="left()">
+                    ⬅️
+                </button>
+                <button class="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full flex justify-center items-center" onclick="down()">
+                    ⬇️
+                </button>
+                <button class="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-full ml-2 flex justify-center items-center" onclick="right()">
+                    ➡️
+                </button>
+            </div>
+        </div>
+
+        <!-- Action button -->
+        <div class="absolute bottom-5 right-5" id="action">
+            <button class="w-16 h-16 bg-red-500 hover:bg-red-600 text-white text-xl rounded-full" onclick="fire()">
+                🔥
+            </button>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <noscript>Enable scripts to play this game</noscript>
+</body>
+
+</html>
